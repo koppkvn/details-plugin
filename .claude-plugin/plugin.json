@@ -1,0 +1,11 @@
+{
+  "name": "details",
+  "version": "1.0.0",
+  "description": "Find curated website design references and reusable interface resources from Details.",
+  "author": {
+    "name": "Kevin Kopp",
+    "url": "https://www.details.so"
+  },
+  "homepage": "https://www.details.so/mcp",
+  "keywords": ["design", "websites", "inspiration", "components", "mcp"]
+}
