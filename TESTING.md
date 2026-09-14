@@ -1,6 +1,6 @@
 # Manual verification
 
-Load this plugin in Claude Code and authenticate with a Details Max, Team, or Lifetime account. A reviewer account is supplied privately during submission; credentials are never part of this repository.
+Load this plugin in Claude Code and Cowork and authenticate with a Details Max, Team, or Lifetime account. A reviewer account is supplied privately during submission; credentials are never part of this repository.
 
 Run these prompts in a conversation where this plugin is available. These are expected behaviors to verify, not previously recorded Claude test results. Exact search rankings can change as the catalog evolves.
 
@@ -11,6 +11,10 @@ Run these prompts in a conversation where this plugin is available. These are ex
 | Find an accordion resource in the Details Vault. | `search_vault`: relevant resources including Accordion, with stable IDs and numbered links. |
 | Give me the implementation instructions for Details Vault resource vault:accordion. | `get_vault_resource`: implementation content, available content modes, and Details/preview links. The tool itself does not execute that content. |
 | Find a quantum tomography control panel in the Details Vault. | `search_vault`: an honest `no_match` response if the catalog has no suitable resource, with no invented item. |
+
+When source evidence is enabled for the connection, also run:
+
+| Show the source brief for Details inspiration aside-20431f, then read the cited lines for its primary interaction. | `get_inspiration`, followed by `read_inspiration_source` with a path and narrow line range copied from the returned source brief. The source tool returns only captured files listed by that brief and never an arbitrary URL. |
 
 Also check requests outside the integration's scope:
 

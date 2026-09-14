@@ -1,8 +1,8 @@
-# Details for Claude Code
+# Details for Claude Code and Cowork
 
 Give your AI taste. Find website references for playful heroes, morphing navigation, and services brought to life with scroll animations. Explore a reference's images and motion, or get reusable components and implementation instructions from the Details Vault.
 
-This plugin connects Claude Code to the hosted [Details](https://www.details.so) MCP server at `https://api.details.so/mcp`.
+This plugin connects Claude Code and Cowork to the hosted [Details](https://www.details.so) MCP server at `https://api.details.so/mcp`.
 
 ## Account access
 
@@ -37,11 +37,12 @@ If you already connected Details manually, use one connection for your test so t
 | `get_inspiration` | Retrieves an individual reference's image or ordered video frames and supporting information. |
 | `search_vault` | Finds relevant reusable resources in the Details Vault. |
 | `get_vault_resource` | Retrieves a selected resource's implementation instructions or supporting documentation. |
+| `read_inspiration_source` | When source evidence is available, reads a narrow cited line range from a captured public source file listed by `get_inspiration`. |
 
-The tools retrieve content and record usage. They do not edit your project, delete collections, change subscriptions, or make purchases. Any subsequent project edits are performed by Claude Code using its own tools and permissions.
+The four core tools are always available to eligible accounts. `read_inspiration_source` appears when source evidence is enabled for the MCP connection. The tools retrieve content and record usage. They do not edit your project, delete collections, change subscriptions, or make purchases. Any subsequent project edits are performed by Claude Code or Cowork using its own tools and permissions.
 
 ## Privacy and support
 
-Details receives the arguments sent to its tools, including search text and optional short project context. Inspiration matching uses the OpenAI API for embeddings and Supabase for search, even when the connected assistant is Claude. Catalog media is delivered through bunny.net. Usage records contain account/client identifiers, tool names, timestamps, and allowance information; they do not contain search text, project context, complete tool arguments, response content, or access tokens.
+Details receives the arguments sent to its tools, including search text and optional short project context. For selected inspirations, it may also return a source brief built from publicly accessible source files and runtime observations captured by Details; the optional source-reading tool returns only narrow ranges from files listed in that brief. Inspiration matching uses the OpenAI API for embeddings and Supabase for search, even when the connected assistant is Claude. Catalog media and private source evidence are delivered or stored through bunny.net. Usage records contain account/client identifiers, tool names, timestamps, and allowance information; they do not contain search text, project context, complete tool arguments, response content, or access tokens.
 
 Read the [Privacy Policy](https://www.details.so/legal/privacy) and [Terms of Service](https://www.details.so/legal/terms). For support, contact [legal@details.so](mailto:legal@details.so). You can revoke a connection in your Details account's MCP settings.
