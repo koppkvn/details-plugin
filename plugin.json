@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "details",
+  "version": "1.2.0",
+  "description": "Search curated website design references, inspect their implementation, and find reusable components.",
+  "author": {
+    "name": "Kevin Kopp",
+    "url": "https://www.details.so"
+  },
+  "homepage": "https://www.details.so/mcp",
+  "repository": "https://github.com/koppkvn/details-plugin",
+  "license": "MIT",
+  "keywords": ["design", "websites", "inspiration", "components", "mcp"],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "details": { "trust": "untrusted" }
+      }
+    }
+  }
+}

@@ -48,6 +48,10 @@ Details receives the arguments sent to its tools, including search text and opti
 
 Read the [Privacy Policy](https://www.details.so/legal/privacy) and [Terms of Service](https://www.details.so/legal/terms). For support, contact [legal@details.so](mailto:legal@details.so). You can revoke a connection in your Details account's MCP settings.
 
+## Hermes Agent
+
+The portable plugin uses Node.js 20.18.1 or newer and npm. Hermes starts `mcp-remote@0.1.49` to connect to the hosted Details server. On first use the bridge opens a browser for each user to authorize their own Details account. It stores the connection locally under `~/.mcp-auth`. The hosted tool catalog can change independently of this package. Hermes treats this server as untrusted and asks before calls that can record usage. The included skill explains how to search and inspect a design reference.
+
 ## Package license
 
 The [MIT license](LICENSE) covers the files in this plugin package. The hosted service, catalog content and Vault resources are governed by the [Details terms](https://www.details.so/legal/terms).
